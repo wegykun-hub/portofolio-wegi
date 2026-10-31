@@ -250,7 +250,7 @@ export const AddCertificateModal: React.FC<AddCertificateModalProps> = ({
   const [detailedExplanation, setDetailedExplanation] = useState('');
   const [practicalImpact, setPracticalImpact] = useState('');
   const [competenciesText, setCompetenciesText] = useState('System Architecture, Cloud Security, Performance Optimization');
-  const [imagePreview, setImagePreview] = useState<string>('/src/assets/images/hero_wegi_potrait.jpg');
+  const [imagePreview, setImagePreview] = useState<string>('/images/hero_wegi_potrait.jpg');
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

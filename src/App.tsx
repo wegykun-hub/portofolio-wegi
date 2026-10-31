@@ -186,7 +186,7 @@ export default function App() {
 
   const handleDownloadResumeSummary = () => {
     const a = document.createElement('a');
-    a.href = '/src/assets/images/cv_wegi.jpeg';
+    a.href = '/images/cv_wegi.jpeg';
     a.download = 'CV_Fadilah_Wegi_Saputra.jpeg';
     document.body.appendChild(a);
     a.click();

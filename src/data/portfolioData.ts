@@ -113,7 +113,7 @@ export const DEFAULT_PROFILE: ProfileIdentity = {
   tiktok: 'https://tiktok.com/@gi_shinji2',
   linkedin: 'https://linkedin.com',
   github: 'https://github.com',
-  heroImage: '/src/assets/images/hero_wegi_portrait.jpg',
+  heroImage: '/images/hero_wegi_portrait.jpg',
 };
 
 export const HERO_METRICS = [
@@ -290,7 +290,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     client: 'Universitas Muhammadiyah',
     role: 'IT Support Intern',
     featured: true,
-    image: '/src/assets/images/pkl1.jpeg',
+    image: '/images/pkl1.jpeg',
     summary:
       'Program Kerja Lapangan (PKL) selama 3 bulan sebagai IT Support di Universitas Terbuka. Menangani perawatan perangkat keras, troubleshooting jaringan, dan instalasi perangkat lunak untuk mendukung aktivitas akademik.',
     problemStatement:
@@ -353,7 +353,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     client: 'United Tractors Jakarta Timur',
     role: 'Peserta Lomba Robotik',
     featured: true,
-    image: '/src/assets/images/juara.jpeg',
+    image: '/images/juara.jpeg',
     summary:
       'Meraih Juara 2 dalam lomba robotik tingkat nasional yang diadakan oleh United Tractors Jakarta Timur. Kompetisi ini merupakan salah satu pencapaian paling membanggakan selama masa sekolah di SMK Yaspim.',
     problemStatement:
@@ -416,7 +416,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     client: 'Institusi Pendidikan',
     role: 'Staf Tatausaha & Pengajar',
     featured: false,
-    image: '/src/assets/images/mengajar.jpeg',
+    image: '/images/mengajar.jpeg',
     summary:
       'Mengelola administrasi sekolah sebagai Staf Tatausaha sekaligus mengajar di kelas selama periode Juli 2023 hingga Januari 2026. Bertanggung jawab atas pengelolaan jadwal guru, surat menyurat, dan pelaksanaan kegiatan sekolah.',
     problemStatement:
@@ -479,7 +479,7 @@ export const PROJECTS_DATA: ProjectItem[] = [
     client: 'Baker O\'ld',
     role: 'Operator Produksi',
     featured: false,
-    image: '/src/assets/images/1123.jpeg',
+    image: '/images/1123.jpeg',
     summary:
       'Bekerja sebagai Operator Produksi di Baker O\'ld selama periode Januari 2026 hingga Mei 2026. Bertanggung jawab atas proses produksi, quality control, dan memastikan target produksi harian terpenuhi.',
     problemStatement:
@@ -545,7 +545,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     credentialId: 'TKJ-SMKY-2020-FWS',
     category: 'frontend',
     categoryLabel: 'Teknik Komputer & Jaringan',
-    image: '/src/assets/images/mikrotik.jpg',
+    image: '/images/mikrotik.jpg',
     examScore: 'Lulus Ujian Kompetensi Keahlian',
     shortExplanation:
       'Sertifikat kompetensi keahlian di bidang Teknik Komputer dan Jaringan yang diperoleh setelah menyelesaikan pendidikan di SMK Yaspim dan lulus ujian kompetensi.',
@@ -572,7 +572,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     credentialId: 'UT-ROBOTIK-2019-JKT',
     category: 'architecture',
     categoryLabel: 'Prestasi Nasional',
-    image: '/src/assets/images/juara2.jpg',
+    image: '/images/juara2.jpg',
     examScore: 'Peringkat 2 dari Seluruh Peserta Nasional',
     shortExplanation:
       'Piagam penghargaan atas pencapaian Juara 2 dalam lomba robotik tingkat nasional yang diselenggarakan oleh United Tractors Jakarta Timur pada tahun 2019.',
@@ -599,7 +599,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     credentialId: 'PASKIBRA-2022-FWS',
     category: 'security',
     categoryLabel: 'Kepemimpinan & Organisasi',
-    image: '/src/assets/images/pelatih.jpg',
+    image: '/images/pelatih.jpg',
     examScore: 'Aktif sebagai Pelatih',
     shortExplanation:
       'Pengakuan atas peran aktif sebagai Pelatih Paskibra, memimpin dan membina anggota dalam kegiatan baris-berbaris, kedisiplinan, dan upacara kemerdekaan.',
@@ -626,7 +626,7 @@ export const CERTIFICATES_DATA: CertificateItem[] = [
     credentialId: 'UNIMUH-S1TI-2025-FWS',
     category: 'cloud',
     categoryLabel: 'Pendidikan Tinggi',
-    image: '/src/assets/images/mahasiswa.png',
+    image: '/images/mahasiswa.png',
     examScore: 'Semester Aktif',
     shortExplanation:
       'Terdaftar sebagai mahasiswa aktif program Sarjana Teknik Informatika (Sistem Informasi) di Universitas Terbuka sejak September 2025.',

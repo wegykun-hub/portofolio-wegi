@@ -113,7 +113,7 @@ export const DEFAULT_PROFILE: ProfileIdentity = {
   tiktok: 'https://tiktok.com/@gi_shinji2',
   linkedin: 'https://linkedin.com',
   github: 'https://github.com',
-  heroImage: '/images/wegi.jpeg',
+  heroImage: '/images/wegii.png',
 };
 
 export const HERO_METRICS = [

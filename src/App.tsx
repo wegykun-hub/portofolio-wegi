@@ -483,25 +483,25 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-5 relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-zinc-900 min-h-[420px] sm:min-h-[500px] flex flex-col justify-end"
+              className="lg:col-span-5 relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-transparent min-h-[420px] sm:min-h-[500px] flex flex-col justify-end"
             >
               <ResilientImage
                 src={profile.heroImage}
                 alt={`Foto potret profesional ${profile.fullName}`}
                 fallbackTitle={profile.fullName}
                 fallbackSubtitle={profile.profession}
-                className="absolute inset-0 w-full h-full object-cover object-top"
+                className="absolute inset-0 w-full h-full object-contain object-bottom"
               />
-              {/* Measured Contrast Scrim */}
-              <div className="relative z-10 bg-gradient-to-t from-black/90 via-black/45 to-transparent p-6 sm:p-7 pt-24">
-                <div className="p-4 rounded-xl bg-black/55 backdrop-blur-md border border-white/15 space-y-1">
-                  <p className="font-display text-base font-semibold text-white">
+              {/* Card info nama — tanpa overlay gelap */}
+              <div className="relative z-10 p-4 sm:p-5">
+                <div className="p-4 rounded-xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md border border-zinc-200/60 dark:border-white/10 space-y-1 shadow-sm">
+                  <p className="font-display text-base font-semibold text-zinc-900 dark:text-white">
                     {profile.fullName}
                   </p>
-                  <p className="text-xs text-zinc-300">
+                  <p className="text-xs text-zinc-600 dark:text-zinc-300">
                     {profile.profession}
                   </p>
-                  <p className="text-xs text-blue-400 font-mono-tabular pt-1">
+                  <p className="text-xs text-blue-600 dark:text-blue-400 font-mono-tabular pt-1">
                     Mahasiswa Aktif Universitas Terbuka · Sistem Informasi
                   </p>
                 </div>

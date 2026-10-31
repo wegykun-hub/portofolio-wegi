@@ -483,7 +483,7 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.98 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-5 relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 bg-transparent min-h-[420px] sm:min-h-[500px] flex flex-col justify-end"
+              className="lg:col-span-5 relative rounded-2xl overflow-hidden bg-transparent min-h-[420px] sm:min-h-[500px] flex flex-col justify-end"
             >
               <ResilientImage
                 src={profile.heroImage}

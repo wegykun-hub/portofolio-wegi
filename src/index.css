@@ -1,0 +1,163 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-mono-tabular {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* =====================================================================
+   ANIMATED GRADIENT BLOB BACKGROUND
+===================================================================== */
+
+/* Blob keyframes */
+@keyframes blob-1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33%       { transform: translate(60px, -50px) scale(1.15); }
+  66%       { transform: translate(-40px, 30px) scale(0.9); }
+}
+@keyframes blob-2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33%       { transform: translate(-70px, 40px) scale(1.1); }
+  66%       { transform: translate(50px, -30px) scale(0.95); }
+}
+@keyframes blob-3 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  33%       { transform: translate(40px, 60px) scale(0.9); }
+  66%       { transform: translate(-60px, -40px) scale(1.2); }
+}
+@keyframes blob-4 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50%       { transform: translate(-30px, -60px) scale(1.1); }
+}
+
+.blob-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.blob-bg::before,
+.blob-bg::after,
+.blob-bg .blob-c,
+.blob-bg .blob-d {
+  content: '';
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.35;
+}
+
+/* Blob 1 — biru elektrik kiri atas */
+.blob-bg::before {
+  width: 600px;
+  height: 600px;
+  top: -150px;
+  left: -100px;
+  background: radial-gradient(circle, #3b82f6, #1d4ed8);
+  animation: blob-1 12s ease-in-out infinite;
+}
+
+/* Blob 2 — ungu kanan atas */
+.blob-bg::after {
+  width: 500px;
+  height: 500px;
+  top: -80px;
+  right: -100px;
+  background: radial-gradient(circle, #8b5cf6, #4f46e5);
+  animation: blob-2 15s ease-in-out infinite;
+}
+
+/* Blob 3 — cyan bawah kiri */
+.blob-bg .blob-c {
+  width: 450px;
+  height: 450px;
+  bottom: 100px;
+  left: 10%;
+  background: radial-gradient(circle, #06b6d4, #0284c7);
+  animation: blob-3 18s ease-in-out infinite;
+}
+
+/* Blob 4 — pink bawah kanan */
+.blob-bg .blob-d {
+  width: 400px;
+  height: 400px;
+  bottom: -80px;
+  right: 5%;
+  background: radial-gradient(circle, #ec4899, #8b5cf6);
+  animation: blob-4 14s ease-in-out infinite;
+}
+
+/* Mode gelap: opacity lebih tinggi, lebih dramatis */
+.dark .blob-bg::before,
+.dark .blob-bg::after,
+.dark .blob-bg .blob-c,
+.dark .blob-bg .blob-d {
+  opacity: 0.2;
+  filter: blur(110px);
+}
+
+/* Mode terang: lebih lembut */
+:not(.dark) .blob-bg::before,
+:not(.dark) .blob-bg::after,
+:not(.dark) .blob-bg .blob-c,
+:not(.dark) .blob-bg .blob-d {
+  opacity: 0.18;
+  filter: blur(100px);
+}
+
+/* Pastikan konten utama di atas blob */
+#root > div {
+  position: relative;
+  z-index: 1;
+}
+
+/* =====================================================================
+   MARQUEE
+===================================================================== */
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 34s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  .blob-bg::before,
+  .blob-bg::after,
+  .blob-bg .blob-c,
+  .blob-bg .blob-d {
+    animation: none;
+  }
+}
